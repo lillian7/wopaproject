@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<html>
+	<head>
+	<title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css}">
+	<title>Wopa Girls blog</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet'>
+	
+	</title>
+	</head>
+	<body>
+	<div class="page-header">
+		
+		<a href="{%url 'blog.views.index'%}"><span class="glyphicon glyphicon-plus"></span></a>
+			<br/>		
+		<h1 class="panel-heading">
+			Welcome to Wopa Blogs 
+		</h1>
+		<h4>
+			<a href="/post/new/"> Create a new blog post</a>			
+		</h4>
+
+	</div>
+
+	<div class="content">
+			<div class="row">
+			<div class="col-md-8">
+				{% block content %}
+
+				{% endblock %}
+
+			</div>
+		</div>
+		<h4>
+			<a href="/category/new/"> You can add a post category here</a>
+		</h4>
+	</div>
+	</body>
+</html>
